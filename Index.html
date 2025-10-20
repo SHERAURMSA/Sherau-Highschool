@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Govt. Secondary School, SHERAU - Tharad</title>
+    <!-- Load Tailwind CSS CDN for speed and responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for the fast-loading notice ticker -->
+    <style>
+        :root {
+            --primary-color: #10B981; /* Emerald 500 */
+            --dark-color: #059669;    /* Emerald 600 */
+            font-family: 'Inter', sans-serif;
+        }
+        .ticker-wrap {
+            height: 3rem;
+            overflow: hidden;
+            background-color: var(--dark-color);
+            padding-left: 100%;
+            box-sizing: content-box;
+        }
+        .ticker {
+            display: inline-block;
+            white-space: nowrap;
+            padding-top: 0.5rem;
+            animation: ticker 25s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* Styling for the large CTA button */
+        .cta-button {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        /* Style for mobile menu toggle */
+        .hamburger-icon div {
+            transition: all 0.3s ease-in-out;
+        }
+        .menu-open .bar-1 { transform: rotate(-45deg) translate(-5px, 6px); }
+        .menu-open .bar-2 { opacity: 0; }
+        .menu-open .bar-3 { transform: rotate(45deg) translate(-5px, -6px); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="shadow-lg sticky top-0 z-50 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <!-- School Name/Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <div class="text-3xl font-extrabold text-emerald-600">S</div>
+                <div class="hidden sm:block text-xl font-bold text-gray-800 tracking-tight">GSHSS, SHERAU</div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex space-x-6 font-medium text-lg">
+                <a href="#home" class="text-gray-600 hover:text-emerald-600 transition duration-150 p-2 rounded-lg">Home</a>
+                <a href="#notices" class="text-gray-600 hover:text-emerald-600 transition duration-150 p-2 rounded-lg">Notices</a>
+                <a href="#academics" class="text-gray-600 hover:text-emerald-600 transition duration-150 p-2 rounded-lg">Academics</a>
+                <a href="#about" class="text-gray-600 hover:text-emerald-600 transition duration-150 p-2 rounded-lg">About Us</a>
+                <a href="#contact" class="text-white bg-emerald-600 hover:bg-emerald-700 py-2 px-4 rounded-xl shadow-lg cta-button">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" class="md:hidden p-2 rounded-lg text-gray-600 hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500" aria-label="Toggle navigation menu">
+                <div class="hamburger-icon space-y-1.5">
+                    <div class="bar-1 w-6 h-0.5 bg-gray-600"></div>
+                    <div class="bar-2 w-6 h-0.5 bg-gray-600"></div>
+                    <div class="bar-3 w-6 h-0.5 bg-gray-600"></div>
+                </div>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-emerald-50">Home</a>
+                <a href="#notices" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-emerald-50">Notices</a>
+                <a href="#academics" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-emerald-50">Academics</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-emerald-50">About Us</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-emerald-600 mt-2 text-center">Contact School</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-emerald-700 h-[60vh] flex items-center justify-center overflow-hidden rounded-b-3xl shadow-xl">
+            <!-- Low-res placeholder image for speed -->
+            <img src="https://placehold.co/1200x600/10B981/ffffff?text=STUDENTS+IN+SHERAU" onerror="this.onerror=null;this.src='https://placehold.co/1200x600/10B981/ffffff?text=Vibrant+Learning+Environment';this.alt='Vibrant image of students learning';" alt="Vibrant learning environment at the school" class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <div class="relative text-center p-6 backdrop-blur-sm bg-black/30 rounded-2xl mx-4">
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 leading-tight shadow-text">
+                    Government Secondary & Higher Secondary School, SHERAU
+                </h1>
+                <p class="text-lg sm:text-xl text-emerald-200 font-medium">
+                    "Knowledge is the supreme asset." | Ta. Tharad, Dist. Banaskantha.
+                </p>
+                <a href="#admissions" class="mt-8 inline-block bg-white text-emerald-700 font-bold py-3 px-8 rounded-full shadow-2xl hover:bg-gray-100 cta-button">
+                    View 2024-25 Admissions
+                </a>
+            </div>
+        </section>
+
+        <!-- Official Notices - The Highest Priority Section -->
+        <section id="notices" class="py-12 md:py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center mb-6">
+                    <svg class="w-8 h-8 text-red-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.398 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h2 class="text-3xl font-extrabold text-gray-900">Official Notices & Circulars</h2>
+                </div>
+                
+                <!-- Fast-Loading Ticker for Critical Alerts -->
+                <div class="ticker-wrap rounded-xl shadow-inner mb-8">
+                    <div class="ticker text-white font-semibold">
+                        &bull; New Admission Forms are available for 11th Science Stream &bull; Last Date for Fee Submission is 30th May 2025 &bull; Important Exam Time Table for 10th and 12th Board Exams released &bull; Staff Recruitment Notice: Apply by 15th June &bull;
+                    </div>
+                </div>
+
+                <!-- Main Notices List -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Notice Card 1 -->
+                    <div class="bg-red-50 p-5 rounded-xl border-l-4 border-red-600 shadow-md hover:shadow-lg transition duration-300">
+                        <p class="text-sm font-semibold text-red-600">NEW | 20 OCT 2025</p>
+                        <h3 class="mt-1 text-xl font-bold text-gray-900">10th/12th Board Exam Results</h3>
+                        <p class="mt-2 text-gray-600">The provisional result sheet for the Board Exams has been published. Students must download the PDF for verification.</p>
+                        <a href="https://placehold.co/300x150/ff0000/ffffff?text=Download+Results+PDF" class="mt-3 inline-flex items-center text-red-600 font-medium hover:text-red-800">
+                            Download PDF Link &rarr;
+                        </a>
+                    </div>
+                    <!-- Notice Card 2 -->
+                    <div class="bg-blue-50 p-5 rounded-xl border-l-4 border-blue-600 shadow-md hover:shadow-lg transition duration-300">
+                        <p class="text-sm font-semibold text-blue-600">UPDATED | 15 OCT 2025</p>
+                        <h3 class="mt-1 text-xl font-bold text-gray-900">Academic Calendar 2025-26</h3>
+                        <p class="mt-2 text-gray-600">The full list of holidays, unit tests, and semester breaks for the upcoming academic year is now available.</p>
+                        <a href="https://placehold.co/300x150/0000ff/ffffff?text=Download+Calendar+PDF" class="mt-3 inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                            View Calendar &rarr;
+                        </a>
+                    </div>
+                    <!-- Notice Card 3 -->
+                    <div class="bg-emerald-50 p-5 rounded-xl border-l-4 border-emerald-600 shadow-md hover:shadow-lg transition duration-300">
+                        <p class="text-sm font-semibold text-emerald-600">REMINDER | 01 OCT 2025</p>
+                        <h3 class="mt-1 text-xl font-bold text-gray-900">Scholarship Application Deadline</h3>
+                        <p class="mt-2 text-gray-600">All eligible students are reminded that the application window for government scholarships closes soon. Submit documents ASAP.</p>
+                        <a href="https://placehold.co/300x150/008000/ffffff?text=Scholarship+Details" class="mt-3 inline-flex items-center text-emerald-600 font-medium hover:text-emerald-800">
+                            Check Details &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Feature Cards (Academics, Admissions, Contact) -->
+        <section id="features" class="py-12 md:py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-extrabold text-center mb-10 text-gray-900">Key Information at a Glance</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Feature 1: Academics -->
+                    <div id="academics" class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-emerald-500 flex flex-col items-center text-center cta-button">
+                        <svg class="w-12 h-12 text-emerald-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.467 9.5 3.5 6.5 3.5c-3.155 0-5 2.5-5 5 0 2.493 2.13 5.418 5.474 8.52 3.1 2.99 6.236 3.53 10.526 3.53 4.29 0 7.426-.54 10.526-3.53C22.87 13.918 25 11.493 25 8.5c0-2.5-1.845-5-5-5-3 0-4.332 1.967-5.5 2.753z"></path></svg>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Academic Programs</h3>
+                        <p class="text-gray-600 mb-4">Detailed syllabus and faculty information for Secondary (9th-10th) and Higher Secondary (11th-12th Science/General).</p>
+                        <a href="#academics" class="text-emerald-600 font-semibold hover:text-emerald-800">Explore Streams &rarr;</a>
+                    </div>
+
+                    <!-- Feature 2: Admissions -->
+                    <div id="admissions" class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-500 flex flex-col items-center text-center cta-button">
+                        <svg class="w-12 h-12 text-blue-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m-10 1h16a2 2 0 002-2V5a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Admissions & Forms</h3>
+                        <p class="text-gray-600 mb-4">Download official admission forms, check the fee structure, and review the necessary documents for enrollment.</p>
+                        <a href="https://placehold.co/300x150/0000ff/ffffff?text=Admissions+Page" class="text-blue-600 font-semibold hover:text-blue-800">Get Application Form &rarr;</a>
+                    </div>
+
+                    <!-- Feature 3: Contact -->
+                    <div id="contact" class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-yellow-500 flex flex-col items-center text-center cta-button">
+                        <svg class="w-12 h-12 text-yellow-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm10 2a1 1 0 100 2 1 1 0 000-2zm-5 4a1 1 0 100 2 1 1 0 000-2zm10 0a1 1 0 100 2 1 1 0 000-2z"></path></svg>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Reach Out to Us</h3>
+                        <p class="text-gray-600 mb-4">Find official contact numbers for the Principal, Administration Office, and important staff members for any query.</p>
+                        <a href="#contact" class="text-yellow-600 font-semibold hover:text-yellow-800">View Contact Details &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="py-12 md:py-16 bg-white">
+            <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Our Commitment to Education</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        The Government Secondary and Higher Secondary School, SHERAU, serves the community of Tharad, Banaskantha, with a dedication to accessible and quality education. Established to uplift the academic standards in the region, we provide comprehensive education from Secondary to Higher Secondary levels in various streams.
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Government-accredited curriculum
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Dedicated Science and General Streams
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Focus on Board Exam Excellence
+                        </li>
+                    </ul>
+                </div>
+                <!-- Placeholder for Infrastructure Image/Map -->
+                <div class="rounded-xl shadow-2xl overflow-hidden">
+                    <img src="https://placehold.co/600x400/D1FAE5/065F46?text=Infrastructure+%7C+SHERAU+CAMPUS" alt="Placeholder image of the school building" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer - High Contrast for Official Details -->
+    <footer class="bg-gray-900 text-white pt-10 pb-4">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <!-- School Identity -->
+            <div>
+                <h3 class="text-2xl font-extrabold text-emerald-400 mb-4">GSHSS, SHERAU</h3>
+                <p class="text-gray-400 text-sm">
+                    Government Secondary and Higher Secondary School<br>
+                    Ta. Tharad, Dist. Banaskantha, Gujarat.
+                </p>
+                <div class="mt-4">
+                    <p class="text-sm font-semibold text-gray-300">U-DISE Code: [00000000000]</p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4 text-emerald-400">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#notices" class="hover:text-emerald-300 transition duration-150">Latest Notices</a></li>
+                    <li><a href="#admissions" class="hover:text-emerald-300 transition duration-150">Admissions</a></li>
+                    <li><a href="#academics" class="hover:text-emerald-300 transition duration-150">Exam Time Table</a></li>
+                    <li><a href="#" class="hover:text-emerald-300 transition duration-150">Staff Login (External)</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4 text-emerald-400">Contact Us</h4>
+                <p class="text-sm text-gray-400">
+                    <span class="font-semibold">Principal's Office:</span> +91-XXXXX-XXXXX<br>
+                    <span class="font-semibold">Administration:</span> +91-XXXXX-YYYYY<br>
+                    <span class="font-semibold">Email:</span> <a href="mailto:gshss.sherau@gujarat.gov.in" class="hover:underline">gshss.sherau@gujarat.gov.in</a>
+                </p>
+            </div>
+            
+            <!-- Location Map Placeholder -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4 text-emerald-400">Location</h4>
+                <div class="w-full h-32 bg-gray-800 rounded-lg flex items-center justify-center text-center text-gray-500 text-xs">
+                    [Google Map Placeholder for SHERAU, Tharad]
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Copyright & Credits -->
+        <div class="mt-8 pt-4 border-t border-gray-700 text-center text-sm text-gray-500">
+            &copy; 2025 Government Secondary and Higher Secondary School, SHERAU. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Functionality -->
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Function to toggle the mobile menu state
+        function toggleMenu() {
+            const isOpen = mobileMenu.classList.toggle('hidden');
+            menuButton.classList.toggle('menu-open', !isOpen);
+            menuButton.setAttribute('aria-expanded', !isOpen);
+        }
+
+        // Add click listener to the button
+        menuButton.addEventListener('click', toggleMenu);
+
+        // Close menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Use a short delay to ensure
